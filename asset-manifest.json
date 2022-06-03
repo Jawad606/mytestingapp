@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/mytestingapp/static/css/main.073c9b0a.css",
+    "main.js": "/mytestingapp/static/js/main.58ecbe73.js",
+    "static/js/787.dc941dc4.chunk.js": "/mytestingapp/static/js/787.dc941dc4.chunk.js",
+    "static/media/logo.svg": "/mytestingapp/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/mytestingapp/index.html",
+    "main.073c9b0a.css.map": "/mytestingapp/static/css/main.073c9b0a.css.map",
+    "main.58ecbe73.js.map": "/mytestingapp/static/js/main.58ecbe73.js.map",
+    "787.dc941dc4.chunk.js.map": "/mytestingapp/static/js/787.dc941dc4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.58ecbe73.js"
+  ]
+}
