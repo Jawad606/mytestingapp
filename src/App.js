@@ -11,9 +11,9 @@ function App() {
      setname(res.data.map(item=>item.name))
     ));
   }
-  const HandleSubmit=(event)=>{
+  const HandleSubmit=async (event) =>{
     event.preventDefault();
-    axios.post('https://namestest.herokuapp.com/name',{name:Input}).then((res)=>console.log("add"))
+    await axios.post('https://namestest.herokuapp.com/name',{name:Input}).then((res)=>console.log("add"))
   }
 
   return (
