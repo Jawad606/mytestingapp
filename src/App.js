@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
-
+import axios from 'axios'
+import {useState} from 'react'
 function App() {
+  const [name, setname] = useState('')
+  const [Input, setInput] = useState('')
+  const get=()=>{
+    axios.get('https://namestest.herokuapp.com/name')
+    .then((res)=>(
+      // setname(res)
+     setname(res.data.map(item=>item.name))
+    ));
+  }
+  const HandleSubmit=(event)=>{
+    event.preventDefault();
+    axios.post('https://namestest.herokuapp.com/name',{name:Input}).then((res)=>console.log("add"))
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{name}</h1>
+      <input type="text" value={Input} onChange={(e)=>setInput(e.target.value)} />
+      <button type='submit' onClick={HandleSubmit}>Input</button>
+      <button onClick={get}>Get </button>
     </div>
   );
 }
